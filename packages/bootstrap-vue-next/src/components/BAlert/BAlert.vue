@@ -31,9 +31,9 @@ import BCloseButton from '../BButton/BCloseButton.vue'
 import BButton from '../BButton/BButton.vue'
 import type {Booleanish, ColorVariant} from '../../types'
 import {computed, onBeforeUnmount, type Ref, toRef, useSlots, watchEffect} from 'vue'
-import {isEmptySlot} from '../../utils'
 import {useBooleanish} from '../../composables'
 import useCountdown from '../../composables/useCountdown'
+import {isEmptySlot} from '../../utils'
 
 interface BAlertProps {
   noHoverPause?: Booleanish

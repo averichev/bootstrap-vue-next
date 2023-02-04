@@ -31,10 +31,10 @@
 
 <script setup lang="ts">
 // import type {BFormCheckboxEmits, BFormCheckboxProps} from '../../types/components'
-import {isEmptySlot} from '../../utils'
 import {computed, onMounted, reactive, ref, toRef, useSlots} from 'vue'
 import {getClasses, getInputClasses, getLabelClasses, useBooleanish, useId} from '../../composables'
 import type {Booleanish, ButtonVariant, InputSize} from '../../types'
+import {isEmptySlot} from '../../utils'
 
 interface BFormCheckboxProps {
   ariaLabel?: string

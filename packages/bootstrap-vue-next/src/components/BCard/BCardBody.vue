@@ -26,10 +26,10 @@
 // import type {BCardBodyProps} from '../../types/components'
 import {computed, toRef, useSlots} from 'vue'
 import BCardTitle from './BCardTitle.vue'
+import {isEmptySlot} from '../../utils'
 import BCardSubtitle from './BCardSubtitle.vue'
 import type {Booleanish, ColorVariant, TextColorVariant} from '../../types'
 import {useBooleanish} from '../../composables'
-import {isEmptySlot} from '../../utils'
 
 interface BCardBodyProps {
   bodyBgVariant?: ColorVariant

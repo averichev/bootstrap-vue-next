@@ -61,7 +61,7 @@
 </template>
 
 <script setup lang="ts">
-import {computed, ref, toRef, useSlots, watch} from 'vue'
+import {computed, onMounted, ref, toRef, useSlots, watch} from 'vue'
 import {useBooleanish, useId} from '../../composables'
 import type {Booleanish, ColorVariant} from '../../types'
 import {BvTriggerableEvent, isEmptySlot} from '../../utils'
@@ -222,6 +222,12 @@ const OnAfterLeave = () => {
   emit('hidden', buildTriggerableEvent('hidden'))
   if (lazyBoolean.value === true) lazyLoadCompleted.value = false
 }
+
+onMounted(() => {
+  if (modelValueBoolean.value === true) {
+    isActive.value = true
+  }
+})
 
 watch(
   modelValueBoolean,
