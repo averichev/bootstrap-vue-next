@@ -96,22 +96,22 @@ noHeader, placement and hide function.
 
 ```html
 <b-button @click="click">Show OffCanvas</b-button>
- <b-offcanvas id="sidebar-no-header" v-model="show" no-header>
-      <div class="p-3">
-        <h4 id="sidebar-no-header-title">Custom header sidebar</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-        <nav class="mb-3">
-          <b-nav vertical>
-            <b-nav-item active>Active</b-nav-item>
-            <b-nav-item href="#link-1">Link</b-nav-item>
-            <b-nav-item href="#link-2">Another Link</b-nav-item>
-          </b-nav>
-        </nav>
-      </div>
-  </b-offcanvas>
+<b-offcanvas id="sidebar-no-header" v-model="show" no-header>
+    <div class="p-3">
+      <h4 id="sidebar-no-header-title">Custom header sidebar</h4>
+      <p>
+        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+        in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+      </p>
+      <nav class="mb-3">
+        <b-nav vertical>
+          <b-nav-item active>Active</b-nav-item>
+          <b-nav-item href="#link-1">Link</b-nav-item>
+          <b-nav-item href="#link-2">Another Link</b-nav-item>
+        </b-nav>
+      </nav>
+    </div>
+</b-offcanvas>
 ```
 ## Footer
 A Footer slot is also available for adding custom content at the bottom of the component.
@@ -119,9 +119,15 @@ The slot is optionally scoped including the `hide()` to add closing behavior
 
 <ClientOnly>
 <b-card>
-    <b-button @click="clickFour" class="m-2">Show OffCanvas</b-button>
+    <b-button @click="clickFour" class="m-2">Show OffCanvas with footer</b-button>
 </b-card>
  <b-offcanvas id="sidebar-no-header" v-model="show4" no-header>
+       <template #footer="{hide}">
+          <div class="d-flex justify-content-start bg-dark text-light px-3 py-2">
+            <strong class="flex-grow-1">Footer</strong>
+            <b-button class="align-self-end" size="sm" @click="hide()">Close</b-button>
+          </div>
+        </template>
       <div class="p-3">
         <h4 id="sidebar-no-header-title">Custom header sidebar</h4>
         <p>
@@ -141,21 +147,21 @@ The slot is optionally scoped including the `hide()` to add closing behavior
 
 
 ```html
-      <b-offcanvas id="sidebar-no-header" v-model="show" no-header>
-        <template #footer="{hide}">
-          <div class="d-flex justify-content-start bg-dark text-light px-3 py-2">
-            <strong class="flex-grow-1">Footer</strong>
-            <b-button class="align-self-end" size="sm" @click="hide()">Close</b-button>
-          </div>
-        </template>
-        <div class="px-3 py-2">
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-            in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          </p>
-          <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail />
-        </div>
-      </b-offcanvas>
+<b-offcanvas id="sidebar-no-header" v-model="show" no-header>
+  <template #footer="{hide}">
+    <div class="d-flex justify-content-start bg-dark text-light px-3 py-2">
+      <strong class="flex-grow-1">Footer</strong>
+      <b-button class="align-self-end" size="sm" @click="hide()">Close</b-button>
+    </div>
+  </template>
+  <div class="px-3 py-2">
+    <p>
+      Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+      in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+    </p>
+    <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail />
+  </div>
+</b-offcanvas>
 ```
 
 # Prevent Close
@@ -174,24 +180,21 @@ pass in triggers for default closing functionality.
           <b-form-invalid-feedback id="input-live-feedback">
             Enter at least 3 letters before closing
           </b-form-invalid-feedback>
-          <b-button @click="click">Close Canvas</b-button>
         </div>
       </b-offcanvas>
 </ClientOnly>
 
-<Client
 
 ```html
-      <b-offcanvas id="sidebar-no-header" v-model="show" @hide="validate">
-        <div class="px-3 py-2">
-          <b-form-input v-model="text" :state="formState" placeholder="Enter your name" />
-          <b-form-invalid-feedback id="input-live-feedback">
-            Enter at least 3 letters before closing
-          </b-form-invalid-feedback>
-          <b-button @click="click">Close Canvas</b-button>
-        </div>
-      </b-offcanvas>
-      <script setup lang="ts">
+<b-offcanvas id="sidebar-no-header" v-model="show" @hide="validate">
+  <div class="px-3 py-2">
+    <b-form-input v-model="text" :state="formState" placeholder="Enter your name" />
+    <b-form-invalid-feedback id="input-live-feedback">
+      Enter at least 3 letters before closing
+    </b-form-invalid-feedback>
+  </div>
+</b-offcanvas>
+<script setup lang="ts">
 
 import {computed, ref, toRef, useSlots, watch} from 'vue'
 import {BvEvent} from './utils'
@@ -205,8 +208,19 @@ const validate = (event: BvEvent) => {
     event.preventDefault()
   }
 }
+
 </script>
 ```
+
+# Disabling Back Drop , Focus and Closing
+There are several props for disabling default closing behavior.
+Prevent closing on back drop with the `noCloseOnBackdrop`. Prevent
+closing on  escape with `noCloseOnEsc`. Backdrop can be disabled
+by specifying `backdrop` to false.
+
+By default the Back Drop will be focused upon entered. If you wish to remove
+this default behavior specify `noFocus` to false
+
 
 <ClientOnly>
   <ComponentReference></ComponentReference>
