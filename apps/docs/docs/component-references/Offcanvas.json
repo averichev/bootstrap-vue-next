@@ -15,23 +15,55 @@
           },
           {
             "prop": "modelValue",
-            "type": "Booleanish"
+            "type": "Booleanish",
+            "description": "Open or close the offcanvas"
           },
           {
             "prop": "bodyScrolling",
-            "type": "Booleanish"
+            "type": "Booleanish",
+            "description": "Allow body to to scroll while offcanvas is displayed (TODO)"
           },
           {
             "prop": "backdrop",
-            "type": "Booleanish"
+            "type": "Booleanish",
+            "description": "Disables the backdrop."
           },
           {
             "prop": "placement",
-            "type": "string"
+            "type": "string",
+            "description": "determines the placement of the offcanvas options : start, end, bottom, top"
+
           },
           {
             "prop": "title",
-            "type": "string"
+            "type": "string",
+            "description": "set a title in the header block"
+          },
+          {
+            "prop": "lazy",
+            "type": "Booleanish",
+            "description": "enable lazy loading for your offcanvas"
+          },
+          {
+            "prop": "noFocus",
+            "type": "Booleanish",
+            "description": "if set to true disables focus upon opening offcanvas"
+          },{
+            "prop": "noHeaderClose",
+            "type": "Booleanish",
+            "description": "enable or disable default header closing option"
+          }
+          ,{
+            "prop": "noCloseOnEsc",
+            "type": "Booleanish",
+            "description": "enable or disable closing offcanvas with esc"
+          },{
+            "prop": "backdropVariant",
+            "type": "ColorVariant",
+            "description": "set color variant of offcanvas"         
+          },{
+            "prop": "static",
+            "type": "Booleanish"
           }
         ],
         "emits": [
