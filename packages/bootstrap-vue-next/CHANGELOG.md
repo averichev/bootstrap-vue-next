@@ -1,5 +1,81 @@
 # Changelog
 
+## [0.8.0](https://github.com/bootstrap-vue/bootstrap-vue-next/compare/v0.7.3...v0.8.0) (2023-02-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* **BDropdown:** do not use internal state to modify dropdown instead expose vmodel
+* **BCard:** remove prop imgRight -- use imgEnd
+* **BImg:** remove prop left -- use prop start
+* **BImg:** remove prop right -- use prop end
+* **BCardImg:** remove prop left -- use prop start
+* **BCardImg:** remove prop right -- use prop end
+* **BNavItemDropdown:** remove prop dropleft -- use dropstart
+* **BNavItemDropdown:** remove prop dropright -- use dropend
+* **BNavItemDropdown:** remove prop right -- use alignEnd
+* **BNavItemDropdown:** remove prop left -- use alignStart
+* **BDropdown:** remove prop right -- use alignEnd
+* **BCard:** remove prop imgLeft -- use imgStart
+* **BDropdown:** remove boundary prop
+* **BDropdown:** remoe popperOpts prop
+* **BDropdown:** remove 'right' prop -- use prop 'end'
+* **BDropdown:** remove 'dropright' prop -- use prop 'dropend'
+* **Dropdown:** remove 'left' prop -- use 'start'
+* **BDropdown:** remove 'dropleft' prop -- use 'dropstart'
+* **BDropdown:** replaace popper usage with floating-ui/vue
+
+### Features
+
+* **BCardImg:** remove prop left -- use prop start ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BCardImg:** remove prop right -- use prop end ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BCard:** remove prop imgLeft -- use imgStart ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BCard:** remove prop imgRight -- use imgEnd ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BDropdown:** add alignEnd prop ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** add alignStart prop ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** add floatingMiddleware prop ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** add lazy prop ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** add offset prop ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **Bdropdown:** add prop noShift ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** add splitDisabled proop ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** add strategy prop ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** close on esc ([d94959e](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/d94959e95201cb56e69f14227651260b922314d9))
+* **BDropdown:** do not use internal state to modify dropdown instead expose vmodel ([ebdd1ee](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/ebdd1ee5c201d709463c2fbaf9d31a47b5a02fc1))
+* **BDropdown:** emit BvEvent on hide (event is preventable) ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** emit BvEvent on show (event is preventable) ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** remoe popperOpts prop ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** remove 'dropleft' prop -- use 'dropstart' ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** remove 'dropright' prop -- use prop 'dropend' ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** remove 'right' prop -- use prop 'end' ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** remove boundary prop ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* **BDropdown:** remove prop right -- use alignEnd ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BDropdown:** replaace popper usage with floating-ui/vue ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+* begin using @flating-ui/vue for positioning instead of popper ([2c3da40](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/2c3da4035ae24eceb6941b58cc1c43bb0b59297a))
+* **BImg:** remove prop left -- use prop start ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BImg:** remove prop right -- use prop end ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BNavItemDropdown:** aadad prop floatingMiddleware ([057fb00](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/057fb0090f397350f3cf82b2d14c2d0998318fb3))
+* **BNavItemDropdown:** add prop lazy ([057fb00](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/057fb0090f397350f3cf82b2d14c2d0998318fb3))
+* **BNavItemDropdown:** add prop menuClass ([057fb00](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/057fb0090f397350f3cf82b2d14c2d0998318fb3))
+* **BNavItemDropdown:** add prop noFlip ([057fb00](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/057fb0090f397350f3cf82b2d14c2d0998318fb3))
+* **BNavItemDropdown:** add prop noShift ([057fb00](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/057fb0090f397350f3cf82b2d14c2d0998318fb3))
+* **BNavItemDropdown:** add prop strategy ([057fb00](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/057fb0090f397350f3cf82b2d14c2d0998318fb3))
+* **BNavItemDropdown:** boolean props are now Booleanish for convenience ([057fb00](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/057fb0090f397350f3cf82b2d14c2d0998318fb3))
+* **BNavItemDropdown:** remove prop dropleft -- use dropstart ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BNavItemDropdown:** remove prop dropright -- use dropend ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BNavItemDropdown:** remove prop left -- use alignStart ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **BNavItemDropdown:** remove prop right -- use alignEnd ([4d4b087](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/4d4b087570a9a44f1f2f39ec0d1162ca987e3642))
+* **Dropdown:** remove 'left' prop -- use 'start' ([bc401f2](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/bc401f27a97a3752e461e842670ac07dc0df4fc8))
+
+
+### Bug Fixes
+
+* **BCarousel:** number parser is parseInt ([9ec9c46](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/9ec9c466e1b089f43cf2f23bef31c2454a70d793))
+* **BCarousel:** threshold -&gt; touchThreshold prop ([7de1bdd](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/7de1bdd05d574d51dc9bd9b529b36cec5b495beb))
+* **BCarousel:** touch swiping system for mobile ([89f04fd](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/89f04fd37eb501840957b35a32cf7d208b839703))
+* **BDropdown:** emits boolean ([057fb00](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/057fb0090f397350f3cf82b2d14c2d0998318fb3))
+* **BDropdown:** remove unused class ([2fd5d4f](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/2fd5d4f8d8527211e9315f1310b6a1998379fb1c))
+* **BNavItemDropdown:** usage after breaking dropdown changes ([057fb00](https://github.com/bootstrap-vue/bootstrap-vue-next/commit/057fb0090f397350f3cf82b2d14c2d0998318fb3))
+
 ## [0.7.3](https://github.com/bootstrap-vue/bootstrap-vue-next/compare/v0.7.2...v0.7.3) (2023-02-05)
 
 
